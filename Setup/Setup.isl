@@ -4391,7 +4391,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]ConfigAdmin\ConfigAdmin.Primary output</td><td/></row>
 		<row><td>ProductCode</td><td>{73F1BDB7-11E1-11D5-9DC6-00C04F2FC33B}</td><td/></row>
 		<row><td>ProductName</td><td>FileSysWatcher</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0001</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
