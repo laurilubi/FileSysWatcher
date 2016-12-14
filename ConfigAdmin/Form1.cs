@@ -45,7 +45,7 @@ namespace ConfigAdmin
             //configService = new ConfigService(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\Service\\config.xml"));
             //configService = new ConfigService(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..", "FileSysService\\config.xml"));
             configService = new ConfigService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Lubi Datakonsult\\FileSysWatcher\\config.xml"));
-            
+
             cleanFolderTargetRepository = new CleanFolderTargetRepository(configService);
 
             LoadData();
@@ -61,6 +61,13 @@ namespace ConfigAdmin
                 DataSource = targetViewModels
             };
             dataGridView1.DataSource = dataGridView1BindingSource;
+        }
+
+        private void SetAddItemButtonPosition()
+        {
+            btnAddItem.Top = 15 + dataGridView1.Top + dataGridView1.ColumnHeadersHeight;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+                btnAddItem.Top += row.Height;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -94,6 +101,16 @@ namespace ConfigAdmin
         {
             var targets = targetViewModels.Select(_ => (CleanFolderTarget)_).ToList();
             cleanFolderTargetRepository.SaveAll(targets);
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            SetAddItemButtonPosition();
+        }
+
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            SetAddItemButtonPosition();
         }
     }
 }

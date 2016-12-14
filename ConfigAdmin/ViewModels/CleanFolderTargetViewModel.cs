@@ -4,6 +4,6 @@ namespace ConfigAdmin.ViewModels
 {
     public class CleanFolderTargetViewModel : CleanFolderTarget
     {
-        public string ActionDelete => "Delete";
+        public string ActionDelete => "Delete entry";
     }
 }
