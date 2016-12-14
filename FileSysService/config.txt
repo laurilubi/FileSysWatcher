@@ -1,0 +1,13 @@
+﻿[Video Compression]
+Folder = c:\tmp\filesys
+FilenameMatchRegex = \\david\\
+EventDelay = 0:0:10
+PreConditionCommand = none||FollowMasterFileModule
+PreConditionExpectedExitCode = 0
+PreConditionFollowerFilenameFormat = {folder}\preview\preview_{file}
+PreConditionAllowAutoDelete = true
+Command = CompressedVideoModule.dll|Lubi|CompressedVideoModule
+ExpectedExitCode = 0
+MinimumStableTime = 0:0:9
+DeletedCountAsStable = true
+Module_CompressionCommand = |xcopy {file} [previewFilename]

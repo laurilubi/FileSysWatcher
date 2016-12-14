@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileSysWatcher>
+  <CleanFolderService>
+    <Delete active="false" folder="C:\Users\laulub\Documents\Coop" maxAge="0" />
+    <Delete active="false" folder="C:\Users\laulub\.oracle_jre_usage" maxAge="43" />
+  </CleanFolderService>
+</FileSysWatcher>
