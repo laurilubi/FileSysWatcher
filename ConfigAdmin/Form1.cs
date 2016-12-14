@@ -112,5 +112,17 @@ namespace ConfigAdmin
         {
             SetAddItemButtonPosition();
         }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            DataGridViewColumn column = null;
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                if (col.DataPropertyName != FolderNameColumn) continue;
+                column = col;
+                break;
+            }
+            dataGridView1_CellClick(sender, new DataGridViewCellEventArgs(column.Index, dataGridView1.RowCount-1));
+        }
     }
 }
